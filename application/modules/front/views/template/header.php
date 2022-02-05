@@ -110,7 +110,7 @@ $langs	= $this->homepage_model->get_languages();
 						<nav>
 							<ul class="nav navbar-nav">
 								<?php echo top_menu('header'); //Dynamic Menus?>
-                                <?php if(count($this->front_user)>0):?>
+                                <?php if(is_countable($this->front_user) ? count($this->front_user)>0 : 0):?>
                     				<li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
                     						<?php echo $this->front_user['firstname']?> <?php echo $this->front_user['lastname']?> 
@@ -123,7 +123,7 @@ $langs	= $this->homepage_model->get_languages();
                     					</ul>
                     				</li>	
                 				<?php endif; ?>
-                                <?php if(count($this->front_user)<1):?>
+                                <?php if(is_countable($this->front_user) ? count($this->front_user)<1 : 0):?>
                				        <li><a data-target="#cs-login" href="#" data-toggle="modal" ><?php echo lang('login')?></a></li>
                    				    <li><a data-target="#cs-signup" href="#" data-toggle="modal" ><?php echo lang('signup')?></a></li>
                 				<?php endif; ?>

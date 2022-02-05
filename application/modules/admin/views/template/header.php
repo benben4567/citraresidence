@@ -125,7 +125,7 @@ $new_canceled		= $this->booking_model->get_canceled_new();
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="<?php echo lang('new')?>">
               <i class="fa fa-flag-o"></i>
-              <?php if(count($new_booking) > 0){?>
+              <?php if(is_countable($new_booking) ? count($new_booking) > 0 : 0){?>
 			  <span class="label label-danger"><?php echo count($new_booking)?></span>
 			  <?php } ?>
             </a>
@@ -153,7 +153,7 @@ $new_canceled		= $this->booking_model->get_canceled_new();
 		  <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="<?php echo lang('new')?> <?php echo lang('canceled_booking')?>">
               <i class="fa fa-bullhorn"></i>
-              <?php if(count($new_canceled) > 0){?>
+              <?php if(is_countable($new_canceled) ? count($new_canceled) > 0 : 0){?>
 			  <span class="label label-danger"><?php echo count($new_canceled)?></span>
 			  <?php } ?>
             </a>
