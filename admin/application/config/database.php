@@ -154,11 +154,11 @@ $db['default'] = array(
 
 	'hostname' => 'localhost',
 
-	'username' => 'u3964998_root',
+	'username' => 'root',
 
-	'password' => 'WVbadgfRg.X]',
+	'password' => '',
 
-	'database' => 'u3964998_citraresidence',
+	'database' => 'depo_citraresidence',
 
 	'dbdriver' => 'mysqli',
 
